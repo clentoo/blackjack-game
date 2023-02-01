@@ -13,6 +13,14 @@ let cardsEl = document.querySelector("#cards-el");
 btn.addEventListener("click", startGame);
 btnCard.addEventListener("click", newCard);
 
+let player = {
+  name: "Per",
+  chips: 145,
+};
+
+let playerEl = document.getElementById("player-el");
+playerEl.textContent = `${player.name}: $${player.chips}`;
+
 function getRandomCard() {
   let randomNumber = Math.floor(Math.random() * 13) + 1;
   if (randomNumber > 10) {
